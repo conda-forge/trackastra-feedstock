@@ -46,6 +46,8 @@ requirements:
     - edt
     - joblib
     - motile >=0.3
+    - dask
+    - geff
 
 test:
   imports:
