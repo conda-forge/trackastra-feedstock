@@ -1,5 +1,5 @@
 {% set name = "trackastra" %}
-{% set version = "0.3.2" %}
+{% set version = "0.5.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/trackastra-{{ version }}.tar.gz
-  sha256: 0d11010ff7f9fb8236d2d49ec8402808f70499f5f64b905b66a99a973572b179
+  sha256: 4f5dae7fc5ac556c46bdfdd98e5716b35e4ad22e7396d5392147c9be1322efcb
 
 build:
   noarch: python
@@ -46,6 +46,8 @@ requirements:
     - edt
     - joblib
     - motile >=0.3
+    - dask
+    - geff
 
 test:
   imports:
