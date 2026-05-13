@@ -11,7 +11,6 @@ source:
   sha256: fce286745bb04345487ad3fd7dd4f8d0a893516b1678df21ee5bcf28f6db516e
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
   entry_points:
@@ -48,6 +47,8 @@ requirements:
     - motile >=0.3
     - dask
     - geff
+  run_constrained:
+    - libblas * *newaccelerate  # [osx and arm64]
 
 test:
   imports:
