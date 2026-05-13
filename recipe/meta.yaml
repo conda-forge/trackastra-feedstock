@@ -11,20 +11,19 @@ source:
   sha256: fce286745bb04345487ad3fd7dd4f8d0a893516b1678df21ee5bcf28f6db516e
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   entry_points:
     - trackastra = trackastra.cli:cli
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - setuptools
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - numpy
     - matplotlib-base
     - scipy
@@ -48,6 +47,8 @@ requirements:
     - motile >=0.3
     - dask
     - geff
+  run_constrained:
+    - libblas * *newaccelerate  # [osx and arm64]
 
 test:
   imports:
@@ -56,7 +57,7 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python
 
 about:
   home: https://github.com/weigertlab/trackastra
