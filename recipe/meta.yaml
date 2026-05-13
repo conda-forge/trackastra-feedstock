@@ -23,7 +23,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - numpy
     - matplotlib-base
     - scipy
@@ -57,7 +57,7 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python
 
 about:
   home: https://github.com/weigertlab/trackastra
