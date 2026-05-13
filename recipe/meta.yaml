@@ -12,7 +12,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
   entry_points:
     - trackastra = trackastra.cli:cli
 
@@ -48,7 +48,7 @@ requirements:
     - dask
     - geff
   run_constrained:
-    - libblas * *newaccelerate  # [osx and arm64]
+    - libblas * *newaccelerate  # [osx]
 
 test:
   imports:
