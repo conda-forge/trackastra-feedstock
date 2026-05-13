@@ -48,7 +48,7 @@ requirements:
     - dask
     - geff
   run_constrained:
-    - libblas * *newaccelerate  # [osx and arm64]
+    - libblas * *newaccelerate  # [osx]
 
 test:
   imports:
