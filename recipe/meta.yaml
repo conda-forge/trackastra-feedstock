@@ -1,6 +1,5 @@
 {% set name = "trackastra" %}
 {% set version = "0.5.5" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
